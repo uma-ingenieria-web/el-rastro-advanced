@@ -93,7 +93,7 @@ def get_ratings(id: str):
         raise HTTPException(400, "Invalid Id")
 
 
-# Auxiliary function to insert a new algo
+# Auxiliary function to insert a new rating
 def insert_rating(new_rating: RatingBasicInfo, product_id: str, user_id: str):
     try:
         product = db.Product.find_one({"_id": ObjectId(product_id)})
